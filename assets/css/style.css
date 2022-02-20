@@ -1,0 +1,378 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+/* ------------------------COMMON------------------------ */
+:root{
+    --width: 1200px;
+}
+.in-block{
+    display: inline-block !important;
+}
+.shadow{
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes imgup{
+    from{
+        transform: translateY(0);
+    }to{
+        transform: translateY(-6px);
+    }
+}
+/* ------------------------END COMMON------------------------ */
+
+
+
+
+
+
+
+/* -------------------------------------- begin Header------------------------------------- */
+
+.header{
+    background-color: #ff0000;
+    height: 50px;
+    box-shadow: 5px 0px rgba(0, 0, 0, 0.8);
+}
+.contain{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contain-logo img{
+    height: 50px;
+    display: inline-block;
+    /* background-color: violet; */
+}
+
+.contain-search{
+    margin: 0 25px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.contain-search .input-search{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    /* background-color: violet; */
+}
+
+.contain-search i{
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.header-nav a{
+    text-transform: uppercase;
+    color: white;   
+    text-align: center;
+    text-decoration: none;
+}
+
+.header-nav .item{
+    display: inline-block;
+    padding: 0 5px;
+    }
+
+.header-nav .item:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.header-nav .item span{
+    font-size: 12px;
+}
+.header-nav .item i{
+    font-size: 15px;
+    display: block;
+    padding-bottom: 5px;
+}
+
+
+/* ----------------------------------------------End Header------------------------------------------------- */
+
+
+
+
+
+/* ------------------------------------------Begin banner-------------------------------------------------- */
+.banner{
+    margin:  auto;
+    width: var(--width);
+    text-align: center;
+}
+
+.delivery{
+    margin: 15px 0;
+    padding: 14px;
+    background-color: #f0f0f0;
+    color: rgb(0, 128, 0);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.delivery i{
+    color: red;
+    margin-right: 5px;
+}
+
+.hotromuadich{
+    width: 100%;
+    margin: 15px 0;
+
+}
+.hotromuadich img{
+    width: 100%;
+}
+
+
+.main-banner{
+    width: var(--width);
+    /* background-color: rosybrown; */
+    height: 375px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner1{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner1 .bn1-list{
+    display: flex;
+    list-style: none;
+    align-items: stretch;
+    flex: 1;
+}
+
+.bn1-list .bn1-item{
+    flex: 1;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-top: 12px;
+}
+
+.bn1-list .bn1-item:hover{
+    font-weight: 700;
+    cursor: pointer;
+    background-color: rgb(231, 230, 230);
+    border-top: 3px solid red;
+}
+
+.banner2{
+    margin-left: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bn2-item{
+    flex: 1;
+    /* background-color: #ff0000;     */
+}
+
+.bn2-item img{
+    width: 100%;
+    height: 100%;
+}
+
+.bn2-item + .bn2-item{
+    margin-top: 10px;
+}
+
+.bn2-item img:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+/* ------------------------------------------End banner-------------------------------------------------- */
+
+/* ------------------------------------------Begin product-------------------------------------------------- */
+.product-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:left;
+    
+}
+
+.product{
+    text-decoration: none;
+    padding: 15px;
+    height: 400px;
+    width: 20%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self:stretch;
+}
+
+.product:hover img{
+    transform: translateY(-10px) ;
+}
+
+.product img{
+    width: 100%;
+    transition: ease 0.3s;
+}
+
+.product-selloff{
+    background-color: #fdd600;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.product-selloff i{
+    color: #ff0000;
+    margin-right: 4px;
+    font-size: 18px;
+}
+
+.product-selloff span{
+    color: #ff0000;
+}
+
+.product-delivery{
+    font-size: 12px;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #17bc2c;
+}
+.product-delivery i{
+    color: #ff0000;
+    font-size: 15px;
+    margin-right: 3px;
+}
+.product-name{
+    text-align: left;
+    color: black;
+    font-weight: 700;
+}
+
+.product-price{
+
+    margin: 5px 0;
+    text-align: left;
+    color: #ff0000;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.product-price span{
+    font-size: 12.5px;
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: normal;
+    text-decoration: line-through;
+    margin-left: 12px;
+}
+.product-star{
+    display: flex;
+    justify-content:left;
+}
+.product-star ul{
+    list-style: none;
+    display: flex;
+}
+.product-star ul li{
+    font-size: 12px;
+    color: #fdd600 ;
+}
+/* ----------------------------------------------------------------- */
+.product-page{
+    margin:  auto;
+    width: var(--width);
+}
+
+.banner-baohanh{
+    width: 100%;
+    background-color: #b50909;
+    text-align: center;
+    height: 65px;
+    line-height: 65px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 15px 0;
+}
+
+.khuyenmaihot{
+    /* background-color: tomato; */
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.kmh-title{
+    width: 100%;
+    background-color: #ff0000;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 21px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/*---------iphone ---------------------------------------------------------------------------------- */
+.iphone{
+    /* background-color: rosybrown; */
+    margin-bottom: 55px;
+}
+
+.iphone-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.iphone-title{
+    text-transform: uppercase;
+    font-size: larger;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.iphone-list{
+    /* display: inline-block; */
+    list-style: none;
+    display: flex;
+}
+
+.iphone-list a{
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.iphone-list .iphone-item{
+    background-color: #ff0000;
+    padding: 7px 18px;
+    border-radius: 8px;
+    font-size: 12.5px;
+    color: white;
+}
+
+/* ------------------------------------------End product-------------------------------------------------- */
+
+
+/* ------------------------------------------Begin footer-------------------------------------------------- */
+/* ------------------------------------------End footer-------------------------------------------------- */
